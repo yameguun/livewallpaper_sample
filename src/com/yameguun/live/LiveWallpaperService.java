@@ -65,7 +65,6 @@ public class LiveWallpaperService extends BaseLiveWallpaperService implements
 		mScene.setBackground(new Background(0.0f, 0.0f, 0.0f));
 		
 		createSceneCallback.onCreateSceneFinished(mScene);
-
 	}
 
 	@Override
