@@ -1,15 +1,15 @@
 package com.yameguun.live;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 
-public class SettingActivity extends PreferenceActivity {
+public class SettingActivity extends Activity {
 	
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.preference);
+		
+		 setContentView(R.layout.setting_layout);
 	}
 	
 }
