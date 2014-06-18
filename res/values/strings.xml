@@ -3,5 +3,6 @@
 
     <string name="app_name">ライブ壁紙</string>
     <string name="wallpaper_description">サンプル</string>
+    <string name="wallpaper_background">背景色の設定</string>
 
 </resources>
