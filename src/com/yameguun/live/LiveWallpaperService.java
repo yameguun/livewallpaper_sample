@@ -13,6 +13,7 @@ import org.andengine.input.sensor.acceleration.IAccelerationListener;
 import org.andengine.util.color.ColorUtils;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
@@ -89,10 +90,9 @@ public class LiveWallpaperService extends BaseLiveWallpaperService implements
 		super.onResumeGame();
 		
 		sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-		sharedPref.getInt("bColor", 0);
 		
 		//背景をセットする
-		mScene.setBackground(new Background(ColorUtils.convertARGBPackedIntToColor(sharedPref.getInt("bColor", 0))));
+		mScene.setBackground(new Background(ColorUtils.convertARGBPackedIntToColor(sharedPref.getInt("bColor", Color.BLACK))));
 	}
 
 }
