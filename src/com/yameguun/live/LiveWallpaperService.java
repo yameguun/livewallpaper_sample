@@ -40,8 +40,11 @@ public class LiveWallpaperService extends BaseLiveWallpaperService implements
 		WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
 		wm.getDefaultDisplay().getMetrics(displayMetrics);
 		wm.getDefaultDisplay().getRotation();
+		
+		//画面のサイズから縦横を取得する
 		CAMERA_WIDTH = displayMetrics.widthPixels;
 		CAMERA_HEIGHT = displayMetrics.heightPixels;
+		
 		this.mCamera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
 
 		return new EngineOptions(true, ScreenOrientation.PORTRAIT_FIXED,
